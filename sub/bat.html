@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>필비트</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script type="text/javascript">
+        $(function() {
+            $('.dim_modal>div>a').click(function() {
+                $('.dim_modal').hide()
+            });
+        })
+
+    </script>
+</head>
+
+<body>
+    <div class="dim_modal">
+        <div>
+            <p>로그아웃 되었습니다.</p>
+            <a href="#">확인</a>
+        </div>
+    </div>
+    <header>
+        <h1><img src="../img/logo.png" alt=""></h1>
+        <input type="checkbox" id="top_music">
+        <label for="top_music"></label>
+    </header>
+    <div class="contant bat">
+        <div class="bat1">
+            <div>
+                <p>RUNNING BADGE</p>
+                <div>
+                    <div><img src="../img/ton.png" alt=""></div>
+                    <div>
+                        <p>Total Distance</p>
+                        <p><span>5,000</span>KM</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p>CYCLING BADGE</p>
+                <div>
+                    <div><img src="../img/ride.png" alt=""></div>
+                    <div>
+                        <p>Total Distance</p>
+                        <p><span>25,000</span>KM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li>
+                <a href="../index.html">
+                    <div><img src="img/f_icon1" alt=""></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div><img src="img/f_icon2" alt=""></div>
+                </a>
+            </li>
+            <li>
+                <a href="community.html">
+                    <div><img src="img/f_icon3" alt=""></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div><img src="img/f_icon4" alt=""></div>
+                </a>
+            </li>
+            <li>
+                <a href="mypage.html">
+                    <div><img src="img/f_icon5" alt=""></div>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

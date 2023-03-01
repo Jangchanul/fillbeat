@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>필비트</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <script type="text/javascript">
+        $(function(){
+            $('.dim_modal>div>a').click(function(){
+               $('.dim_modal').hide() 
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="dim_modal">
+        <div>
+            <p>로그아웃 되었습니다.</p>
+            <a href="#">확인</a>
+        </div>
+    </div>
+    <header>
+        <div class="grid">
+            <h1><img src="../img/logo.png" alt=""></h1>
+            <label class="switch-button">
+                <input type="checkbox" />
+                <span class="onoff-switch"></span>
+            </label>
+        </div>
+    </header>
+    <div class="contant my">
+        <div class="my1">
+            <div class="my1_1">
+                <input type="file" id="my_img">
+                <label for="my_img"><img src="../img/my_img.png" alt=""></label>
+            </div>
+            <div class="my1_2"><a href="javascript:;">
+                <div><img src="../img/ride.png" alt=""></div>
+                <div><img src="../img/ton.png" alt=""></div>
+            </a></div>
+        </div>
+        <ul class="my2">
+            <li>
+                <div>ID</div>
+                <div>feel1030@naver.com</div>
+            </li>
+            <li>
+                <div>NAME</div>
+                <div>feelbeat</div>
+            </li>
+            <li>
+                <div>COUNTRY</div>
+                <div class="count">
+                    <div><img src="../img/kor.png" alt=""></div>
+                    <p>한국</p>
+                </div>
+            </li>
+        </ul>
+        <ul class="my3">
+            <li>
+                <div><img src="../img/black_star.png" alt=""></div>
+                <div>
+                    <div><img src="../img/icon4.png" alt=""></div>
+                    <p>03:56:00</p>
+                </div>
+            </li>
+            <li>
+                <div><img src="../img/yellow.png" alt=""></div>
+                <div>
+                    <div><img src="../img/icon5.png" alt=""></div>
+                    <p>03:56:00</p>
+                </div>
+            </li>
+        </ul>
+        <ul class="my4">
+            <li><button type="button" onclick="location.href='result.html'">RESULT</button></li>
+            <li><button type="button" onclick="location.href='bat.html'">BADGE</button></li>
+        </ul>
+        <div class="my5">
+            <button type="button" style="color: #FF2D2D;" onclick="location.href='./login.html'">로그아웃</button>
+            <button type="button" onclick="location.href='secession.html'">회원탈퇴</button>    
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li>
+                <a href="../index.html">
+                    <div><img src="img/f_icon1" alt=""></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div><img src="img/f_icon2" alt=""></div>
+                </a>
+            </li>
+            <li>
+                <a href="community.html">
+                    <div><img src="img/f_icon3" alt=""></div>
+                </a>
+            </li>
+            <li>
+                <a href="record.html">
+                    <div><img src="img/f_icon4" alt=""></div>
+                </a>
+            </li>
+            <li>
+                <a href="mypage.html">
+                    <div><img src="img/f_icon5" alt=""></div>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

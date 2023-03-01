@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>필비트</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style type="text/css">
+        
+        .tab_box{padding: 20px 0 80px;}
+        .tab_menu_container {
+            display: flex;
+            justify-content: space-between;
+            width: 82%;
+            margin: 90px auto 0;
+        }
+
+        .tab_menu_btn {
+            width: 48%;
+            height: 40px;
+            border: none;
+            background: #343434;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .tab_menu_btn:nth-child(1)>div {
+            background: url(../img/icon16.png)no-repeat center;
+            background-size: cover;
+            width: 16px;
+            height: 20px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .tab_menu_btn:nth-child(2)>div {
+            background: url(../img/icon15.png)no-repeat center;
+            background-size: cover;
+            width: 22px;
+            height: 18px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .tab_menu_btn.on {
+            font-weight: 700;
+            background: #73807C;
+        }
+        
+        .tab_menu_btn:nth-child(1).on>div {
+            background: url(../img/icon14.png)no-repeat center;
+            background-size: cover;
+            width: 16px;
+            height: 20px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .tab_menu_btn:nth-child(2).on>div {
+            background: url(../img/icon17.png)no-repeat center;
+            background-size: cover;
+            width: 22px;
+            height: 18px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .tab_box {
+            display: none;
+            padding: 20px 30px 80px;;
+        }
+
+        .tab_box.on {
+            display: block;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        $(function() {
+            $('.tab_menu_btn').on('click', function() {
+                //버튼 색 제거,추가
+                $('.tab_menu_btn').removeClass('on');
+                $(this).addClass('on')
+
+                //컨텐츠 제거 후 인덱스에 맞는 컨텐츠 노출
+                var idx = $('.tab_menu_btn').index(this);
+
+                $('.tab_box').hide();
+                $('.tab_box').eq(idx).show();
+            });
+        })
+
+    </script>
+</head>
+
+<body style="background: url(../img/record_bg1.png)no-repeat;background-size: cover;">
+    <section id="level">
+    <header>
+        <div class="hd_top">
+            <div class="back">
+                <a href="javascript:history.back(-1)"></a>
+            </div>
+            <p class="hd_title">LEVEL TEST</p>
+            <img src="../img/hd_logo.png" class="hd_logo">
+        </div>
+    </header>
+    <div class="tab_wrap">
+        <div class="tab_menu_container">
+            <button class="tab_menu_btn on" type="button">
+                <div></div>
+            </button>
+            <button class="tab_menu_btn" type="button">
+                <div></div>
+            </button>
+        </div> <!-- tab_menu_container e -->
+
+        <div class="tab_box_container">
+            <div class="tab_box on">
+                <ul class="test_rap">
+                    <li>
+                        <div><img src="../img/icon18.png" alt=""></div>
+                        <div>
+                            <div>GOAL DISTACE</div>
+                            <div>1 Km</div>
+                        </div>
+                        <div>
+                            <div>GOAL TIME</div>
+                            <div>10 Minute</div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="location.href='level_test2.html'">TEST</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="../img/icon19.png" alt=""></div>
+                        <div>
+                            <div>GOAL DISTACE</div>
+                            <div>1 Km</div>
+                        </div>
+                        <div>
+                            <div>GOAL TIME</div>
+                            <div>10 Minute</div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="location.href='level_test2.html'">TEST</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="../img/icon20.png" alt=""></div>
+                        <div>
+                            <div>GOAL DISTACE</div>
+                            <div>1 Km</div>
+                        </div>
+                        <div>
+                            <div>GOAL TIME</div>
+                            <div>10 Minute</div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="location.href='level_test2.html'">TEST</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="../img/icon21.png" alt=""></div>
+                        <div>
+                            <div>GOAL DISTACE</div>
+                            <div>1 Km</div>
+                        </div>
+                        <div>
+                            <div>GOAL TIME</div>
+                            <div>10 Minute</div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="location.href='level_test2.html'">TEST</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="../img/icon22.png" alt=""></div>
+                        <div>
+                            <div>GOAL DISTACE</div>
+                            <div>1 Km</div>
+                        </div>
+                        <div>
+                            <div>GOAL TIME</div>
+                            <div>10 Minute</div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="location.href='level_test2.html'">TEST</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="../img/icon23.png" alt=""></div>
+                        <div>
+                            <div>GOAL DISTACE</div>
+                            <div>1 Km</div>
+                        </div>
+                        <div>
+                            <div>GOAL TIME</div>
+                            <div>10 Minute</div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="location.href='level_test2.html'">TEST</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="../img/icon24.png" alt=""></div>
+                        <div>
+                            <div>GOAL DISTACE</div>
+                            <div>1 Km</div>
+                        </div>
+                        <div>
+                            <div>GOAL TIME</div>
+                            <div>10 Minute</div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="location.href='level_test2.html'">TEST</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="../img/icon25.png" alt=""></div>
+                        <div>
+                            <div>GOAL DISTACE</div>
+                            <div>1 Km</div>
+                        </div>
+                        <div>
+                            <div>GOAL TIME</div>
+                            <div>10 Minute</div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="location.href='level_test2.html'">TEST</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab_box">
+                <ul class="test_rap">
+                    <li>
+                        <div><img src="../img/icon18.png" alt=""></div>
+                        <div>
+                            <div>GOAL DISTACE</div>
+                            <div>1 Km</div>
+                        </div>
+                        <div>
+                            <div>GOAL TIME</div>
+                            <div>10 Minute</div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="location.href='level_test2.html'">TEST</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="../img/icon19.png" alt=""></div>
+                        <div>
+                            <div>GOAL DISTACE</div>
+                            <div>1 Km</div>
+                        </div>
+                        <div>
+                            <div>GOAL TIME</div>
+                            <div>10 Minute</div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="location.href='level_test2.html'">TEST</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="../img/icon20.png" alt=""></div>
+                        <div>
+                            <div>GOAL DISTACE</div>
+                            <div>1 Km</div>
+                        </div>
+                        <div>
+                            <div>GOAL TIME</div>
+                            <div>10 Minute</div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="location.href='level_test2.html'">TEST</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="../img/icon21.png" alt=""></div>
+                        <div>
+                            <div>GOAL DISTACE</div>
+                            <div>1 Km</div>
+                        </div>
+                        <div>
+                            <div>GOAL TIME</div>
+                            <div>10 Minute</div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="location.href='level_test2.html'">TEST</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="../img/icon22.png" alt=""></div>
+                        <div>
+                            <div>GOAL DISTACE</div>
+                            <div>1 Km</div>
+                        </div>
+                        <div>
+                            <div>GOAL TIME</div>
+                            <div>10 Minute</div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="location.href='level_test2.html'">TEST</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="../img/icon23.png" alt=""></div>
+                        <div>
+                            <div>GOAL DISTACE</div>
+                            <div>1 Km</div>
+                        </div>
+                        <div>
+                            <div>GOAL TIME</div>
+                            <div>10 Minute</div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="location.href='level_test2.html'">TEST</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="../img/icon24.png" alt=""></div>
+                        <div>
+                            <div>GOAL DISTACE</div>
+                            <div>1 Km</div>
+                        </div>
+                        <div>
+                            <div>GOAL TIME</div>
+                            <div>10 Minute</div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="location.href='level_test2.html'">TEST</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="../img/icon25.png" alt=""></div>
+                        <div>
+                            <div>GOAL DISTACE</div>
+                            <div>1 Km</div>
+                        </div>
+                        <div>
+                            <div>GOAL TIME</div>
+                            <div>10 Minute</div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="location.href='level_test2.html'">TEST</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div> <!-- tab_box_container e -->
+    </div> <!-- tab_wrap e -->
+    <footer>
+        <ul>
+            <li>
+                <a href="index.html">
+                    <div><img src="img/f_icon1" alt=""></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div><img src="img/f_icon2" alt=""></div>
+                </a>
+            </li>
+            <li>
+                <a href="sub/community.html">
+                    <div><img src="img/f_icon3" alt=""></div>
+                </a>
+            </li>
+            <li>
+                <a href="sub/record.html">
+                    <div><img src="img/f_icon4" alt=""></div>
+                </a>
+            </li>
+            <li>
+                <a href="sub/mypage.html">
+                    <div><img src="img/f_icon5" alt=""></div>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    </section>
+</body>
+
+</html>

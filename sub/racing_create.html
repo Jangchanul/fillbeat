@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>필비트</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body style="background: url(../img/record_bg1.png)no-repeat;background-size: cover;">
+    <section id="racing_create">
+    <header>
+        <div class="hd_top">
+            <div class="back">
+                <a href="javascript:history.back(-1)"></a>
+            </div>
+            <p class="hd_title">RACING GAME</p>
+            <img src="../img/hd_logo.png" class="hd_logo">
+        </div>
+    </header>
+    <div class="inner30">
+        <div class="inp_wrap">
+            <p>TITLE</p>
+            <input type="text">
+        </div>
+        <div class="inp_wrap">
+            <p>ESTIMATED DEPARTURE TIME</p>
+            <input type="text">
+        </div>
+        <div class="inp_wrap">
+            <p>GAME TYPE</p>
+            <div class="flex btw">
+                <img src="../img/top_music_off.png">
+                <div class="select_wrap">
+                    <select>
+                        <option>RUNNING</option>
+                        <option>-</option>
+                        <option>-</option>
+                        <option>-</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="inp_wrap">
+            <p>NUMBER OF PEOPLE</p>
+            <div class="flex btw">
+                <img src="../img/top_music_off.png">
+                <div class="select_wrap">
+                    <select>
+                        <option>1</option>
+                        <option>-</option>
+                        <option>-</option>
+                        <option>-</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="inp_wrap">
+            <p>DISTANCE</p>
+            <div class="flex btw">
+                <img src="../img/top_music_off.png">
+                <div class="select_wrap">
+                    <select>
+                        <option>10KM</option>
+                        <option>-</option>
+                        <option>-</option>
+                        <option>-</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <button type="button" class="rg_create_btn" onclick="location.href='racing_host.html'">CREATE</button>
+    </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>필비트</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+	
+	 <script type="text/javascript">
+        $(function() {
+            
+
+			$('.dim_modal2>div>a.dim_stay').click(function(){
+               $('.dim_modal2').hide() 
+            });
+            $('.hd_top .back a').click(function(){
+               $('.dim_modal2').fadeIn(200) 
+            });
+        })
+
+		
+
+    </script>
+</head>
+
+<body style="background: url(../img/record_bg1.png)no-repeat;background-size: cover;">
+	<div class="dim_modal2">
+        <div>
+            <p>Are you sure to exit game?</p>
+			<a href="" class="dim_stay">STAY</a>
+            <a href="javascript:history.back(-1)" class="dim_exit">EXIT</a>
+        </div>
+    </div>
+    <section id="racing_host">
+    <header>
+        <div class="hd_top">
+            <div class="back">
+                <a></a>
+            </div>
+            <p class="hd_title">RACING GAME</p>
+            <img src="../img/hd_logo.png" class="hd_logo">
+        </div>
+    </header>
+    <div class="my my_test">
+        <ul class="let_top">
+            <li>
+                <div><img src="../img/icon28.png" alt=""></div>
+                <div><span>0</span>km</div>
+            </li>
+            <li>
+                <div><img src="../img/icon27.png" alt=""></div>
+                <div><span>10</span>km</div>
+            </li>
+            <li>
+                <div><img src="../img/icon26.png" alt=""></div>
+                <div><span>0:00:00</span></div>
+            </li>
+        </ul>
+        <ul class="let_mid">
+            <li>
+                <div class="lt_box">
+                    <p>RUNNING</p>
+                    <p>10KM</p>
+                    <div class="rc_icon"></div>
+                </div>
+            </li>
+        </ul>
+        
+        <div class="inner30">
+            <div class="flex">
+                <img src="../img/rank.png" class="rank">
+                <p class="rank_txt">RANK</p>
+            </div>
+            
+            <div class="rank_box">
+                <div class="flex">
+                    <p class="rank_numb">No.</p>
+                    <p class="rank_info">Info</p>
+                </div>
+                <div class="flex">
+                    <p class="rank_numb rank_1st">1</p>
+                    <div class="flex btw">
+                        <div class="rank_img_box">
+                            <img src="../img/rank1.png">
+                            <img src="../img/rank2.png">
+                        </div>
+                        
+                        <div class="rank_id_box">
+                            <img src="../img/rank_crown.png">
+                            <p class="rank_1st">FEELBEAT</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex">
+                    <p class="rank_numb">2</p>
+                    <div class="flex btw">
+                        <div class="rank_img_box">
+                            <img src="../img/rank3.png">
+                            <img src="../img/rank4.png">
+                        </div>
+                        
+                        <div class="rank_id_box">
+                            <p>자전거러버</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex">
+                    <p class="rank_numb">3</p>
+                    <div class="flex btw">
+                        <div class="rank_img_box">
+                            <img src="../img/rank5.png">
+                            <img src="../img/rank6.png">
+                        </div>
+                        
+                        <div class="rank_id_box">
+                            <p>달려라하니</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" class="rc_host_btn">READY</button>
+        </div>
+    </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>필비트</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="body1">
+    <section id="record">
+    <header class="lo_hd">
+        <div class="hd_top">
+            <div class="back">
+                <a href="javascript:history.back(-1)"></a>
+            </div>
+            <p class="hd_title">ID/PW 찾기</p>
+            <div></div>
+        </div>
+    </header>
+
+    <div class="trick2"></div>
+
+    <form action="" class="join_form grid">
+        <div class="join_input">
+            <input type="email" placeholder="이메일 주소를 입력 하세요">
+            <input type="password" placeholder="비밀번호를 입력 하세요">
+            <input type="password" placeholder="비밀번호를 재입력 하세요">
+            <input type="text" placeholder="이름을 입력 하세요">
+        </div>
+        <div class="join_select">
+            <select name="" id="">
+                <option value="">국적선택</option>
+            </select>
+            <select name="" id="">
+                <option value="">성별선택</option>
+                <option value="">남성</option>
+                <option value="">여성</option>
+            </select>
+        </div>
+        <ul>
+            <li>
+                <input type="checkbox" id="join_check_1" name="dongs">
+                <label for="join_check_1">유료화 서비스 고려 정보제공 동의</label>
+            </li>
+            <li>
+                <input type="checkbox" id="join_check_2" name="dongs">
+                <label for="join_check_2">부주의로 인한 안전사고 확인</label>
+            </li>
+        </ul>
+        <button type="submit">가입하기</button>
+        <p>이미 회원인가요?<span onclick="location.href='./login.html'">로그인</span></p>
+    </form>
+</body>
+
+</html>

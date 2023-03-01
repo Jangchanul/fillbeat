@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>필비트</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script type="text/javascript">
+        $(function() {
+            $('.tab_menu_btn').on('click', function() {
+                //버튼 색 제거,추가
+                $('.tab_menu_btn').removeClass('on');
+                $(this).addClass('on')
+
+                //컨텐츠 제거 후 인덱스에 맞는 컨텐츠 노출
+                var idx = $('.tab_menu_btn').index(this);
+
+                $('.tab_box').hide();
+                $('.tab_box').eq(idx).show();
+            });
+        })
+
+    </script>
+</head>
+
+<body style="background: url(../img/record_bg1.png)no-repeat;background-size: cover;">
+    <section id="level2">
+    <header>
+        <div class="hd_top">
+            <div class="back">
+                <a href="javascript:history.back(-1)"></a>
+            </div>
+            <p class="hd_title">LEVEL TEST</p>
+            <img src="../img/hd_logo.png" class="hd_logo">
+        </div>
+    </header>
+    <div class="my my_test">
+        <ul class="let_top">
+            <li>
+                <div><img src="../img/icon28.png" alt=""></div>
+                <div><span>0</span>km</div>
+            </li>
+            <li>
+                <div><img src="../img/icon27.png" alt=""></div>
+                <div class="lt_active"><span>30</span>km</div>
+            </li>
+            <li>
+                <div><img src="../img/icon26.png" alt=""></div>
+                <div class="lt_active"><span>2:58:00</span></div>
+            </li>
+        </ul>
+        <ul class="let_mid">
+            <li>
+                <div class="lt_box">
+                    <div>RED</div>
+                    <div>RUNNING</div>
+                    <div>30KM / 3:45:00</div>
+                    <div><img src="../img/icon14.png" alt=""></div>
+                    <div class="shark"></div>
+                </div>
+            </li>
+            <li><button type="button" class="lt_giveup">GIVE UP</button></li>
+            <li>
+                <div></div>
+                <div class="lt_music">
+                    <p>노래제목 표시</p>
+                    <div>
+                        <button type="button"><img src="../img/play.png" alt="재생"></button>
+                        <button type="button"><img src="../img/play2.png" alt="다음곡"></button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </section>
+</body>
+
+</html>

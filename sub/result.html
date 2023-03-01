@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>필비트</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style type="text/css">
+        .tab_menu_container {
+            display: flex;
+        }
+
+        .tab_menu_btn {
+            width: calc(100%/3);
+            height: 40px;
+            transition: 0.1s all;
+            border: none;
+            color: #AAAAAA;
+        }
+
+        .tab_menu_btn.on {
+            font-weight: 700;
+            background: #FFFEFB;
+            color: #000;
+        }
+
+        .tab_box {
+            display: none;
+            padding: 20px;
+        }
+
+        .tab_box.on {
+            display: block;
+        }
+
+        header {
+            position: relative;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function() {
+            $('.dim_modal>div>a').click(function() {
+                $('.dim_modal').hide()
+            });
+            $('.secess button').click(function() {
+                $('.dim_modal').fadeIn(200)
+            });
+
+            $('.tab_menu_btn').on('click', function() {
+                //버튼 색 제거,추가
+                $('.tab_menu_btn').removeClass('on');
+                $(this).addClass('on')
+
+                //컨텐츠 제거 후 인덱스에 맞는 컨텐츠 노출
+                var idx = $('.tab_menu_btn').index(this);
+
+                $('.tab_box').hide();
+                $('.tab_box').eq(idx).show();
+            });
+        })
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            setDateBox();
+        });
+
+        // select box 연도 , 월 표시
+        function setDateBox() {
+            var dt = new Date();
+            var year = "";
+            var com_year = dt.getFullYear();
+            // 발행 뿌려주기
+            $("#YEAR").append("<option value=''>년도</option>");
+            // 올해 기준으로 -1년부터 +5년을 보여준다.
+            for (var y = (com_year - 3); y <= (com_year + 0); y++) {
+                $("#YEAR").append("<option value='" + y + "'>" + y + " 년" + "</option>");
+            }
+            // 월 뿌려주기(1월부터 12월)
+            var month;
+            $("#MONTH").append("<option value=''>월</option>");
+            for (var i = 1; i <= 12; i++) {
+                $("#MONTH").append("<option value='" + i + "'>" + i + " 월" + "</option>");
+            }
+        }
+        
+        function setDateBox() {
+            var dt = new Date();
+            var year = "";
+            var com_year = dt.getFullYear();
+            // 발행 뿌려주기
+            $("#YEARs").append("<option value=''>년도</option>");
+            // 올해 기준으로 -1년부터 +5년을 보여준다.
+            for (var y = (com_year - 3); y <= (com_year + 0); y++) {
+                $("#YEARs").append("<option value='" + y + "'>" + y + " 년" + "</option>");
+            }
+            // 월 뿌려주기(1월부터 12월)
+            var month;
+            $("#MONTHs").append("<option value=''>월</option>");
+            for (var i = 1; i <= 12; i++) {
+                $("#MONTHs").append("<option value='" + i + "'>" + i + " 월" + "</option>");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="dim_modal">
+        <div>
+            <p>회원탈퇴가 완료되었습니다</p>
+            <a href="#">확인</a>
+        </div>
+    </div>
+    <header>
+        <h1><img src="../img/logo.png" alt=""></h1>
+        <input type="checkbox" id="top_music">
+        <label for="top_music"></label>
+    </header>
+    <div class="tab_wrap">
+        <div class="tab_menu_container">
+            <button class="tab_menu_btn on" type="button">주행거리</button>
+            <button class="tab_menu_btn" type="button">월간</button>
+            <button class="tab_menu_btn" type="button">연간</button>
+        </div> <!-- tab_menu_container e -->
+
+        <div class="tab_box_container resu">
+            <div class="tab_box on">
+                <div><input type="date"></div>
+                <ul>
+                    <li>
+                        <ul class="rest_in">
+                            <li>
+                                <p><span><img src="../img/icon6.png" alt=""></span>WALKING</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <div><img src="../img/icon7.png" alt=""></div>
+                                    <p><span>30</span>KM</p>
+                                </div>
+                                <div>
+                                    <div><img src="../img/icon8.png" alt=""></div>
+                                    <p>00:30:00</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="rest_in">
+                            <li>
+                                <p><span style="width: 16px;"><img src="../img/icon5.png" alt=""></span>RUNNING</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <div><img src="../img/icon7.png" alt=""></div>
+                                    <p><span>30</span>KM</p>
+                                </div>
+                                <div>
+                                    <div><img src="../img/icon8.png" alt=""></div>
+                                    <p>00:30:00</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="rest_in">
+                            <li>
+                                <p><span style="width: 24px;"><img src="../img/icon4.png" alt=""></span>CYCLING</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <div><img src="../img/icon7.png" alt=""></div>
+                                    <p><span>30</span>KM</p>
+                                </div>
+                                <div>
+                                    <div><img src="../img/icon8.png" alt=""></div>
+                                    <p>00:30:00</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab_box">
+                <div>
+                    <select name="YEAR" id="YEAR" title="년도" class="select w80"></select>
+                    <select name="MONTH" id="MONTH" title="월" class="select w80"></select>
+                </div>
+                <ul>
+                    <li>
+                        <ul class="rest_in">
+                            <li>
+                                <p><span><img src="../img/icon6.png" alt=""></span>WALKING</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <div><img src="../img/icon7.png" alt=""></div>
+                                    <p><span>30</span>KM</p>
+                                </div>
+                                <div>
+                                    <div><img src="../img/icon8.png" alt=""></div>
+                                    <p>00:30:00</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="rest_in">
+                            <li>
+                                <p><span style="width: 16px;"><img src="../img/icon5.png" alt=""></span>RUNNING</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <div><img src="../img/icon7.png" alt=""></div>
+                                    <p><span>30</span>KM</p>
+                                </div>
+                                <div>
+                                    <div><img src="../img/icon8.png" alt=""></div>
+                                    <p>00:30:00</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="rest_in">
+                            <li>
+                                <p><span style="width: 24px;"><img src="../img/icon4.png" alt=""></span>CYCLING</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <div><img src="../img/icon7.png" alt=""></div>
+                                    <p><span>30</span>KM</p>
+                                </div>
+                                <div>
+                                    <div><img src="../img/icon8.png" alt=""></div>
+                                    <p>00:30:00</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab_box">
+                <div>
+                    <select name="YEAR" id="YEARs" title="년도" class="select w80"></select>
+                    <select name="MONTH" id="MONTHs" title="월" class="select w80"></select>
+                </div>
+                <ul>
+                    <li>
+                        <ul class="rest_in">
+                            <li>
+                                <p><span><img src="../img/icon6.png" alt=""></span>WALKING</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <div><img src="../img/icon7.png" alt=""></div>
+                                    <p><span>30</span>KM</p>
+                                </div>
+                                <div>
+                                    <div><img src="../img/icon8.png" alt=""></div>
+                                    <p>00:30:00</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="rest_in">
+                            <li>
+                                <p><span style="width: 16px;"><img src="../img/icon5.png" alt=""></span>RUNNING</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <div><img src="../img/icon7.png" alt=""></div>
+                                    <p><span>30</span>KM</p>
+                                </div>
+                                <div>
+                                    <div><img src="../img/icon8.png" alt=""></div>
+                                    <p>00:30:00</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="rest_in">
+                            <li>
+                                <p><span style="width: 24px;"><img src="../img/icon4.png" alt=""></span>CYCLING</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <div><img src="../img/icon7.png" alt=""></div>
+                                    <p><span>30</span>KM</p>
+                                </div>
+                                <div>
+                                    <div><img src="../img/icon8.png" alt=""></div>
+                                    <p>00:30:00</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div> <!-- tab_box_container e -->
+    </div> <!-- tab_wrap e -->
+</body></html>

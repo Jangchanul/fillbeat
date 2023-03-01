@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>필비트</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').bxSlider({
+                modo: 'fade',
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .swiper-slide {
+            text-align: center;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 44vw;}
+        .swiper-pagination-bullet{width: 2.888vw;height: 2.888vw;background: rgba(255,255,255,0.3);;}
+        .swiper-pagination-bullet-active{background: #fff;}
+    </style>
+    </head>
+
+    <body>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper int_wrap">
+                <div class="swiper-slide">
+                    <div>
+                        <div><img src="./img/logo2.png" alt=""></div>
+                        <ul>
+                            <li>FEEL BEAT COMPANY</li>
+                            <li>FEEL THE BEAT &amp; KEEP THE STEP!</li>
+                            <li>YOU CAN KEEP THE PACE YOU WANT</li>
+                            <li>FOCUS THE STEP!</li>
+                            <li>BEATS WILL PUSH YOUR BODY</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div><img src="./img/logo2.png" alt=""></div>
+                        <ul>
+                            <li>FEEL BEAT COMPANY</li>
+                            <li>HAVE YOU CHECK YOUR BODY LEVEL?</li>
+                            <li>YOU CAN CHECK YOUR BODY</li>
+                            <li>LEVEL THROUGH THE TEST</li>
+                            <li>BEATS WILL IMPORVE YOUR HEALTH &amp; LEVEL</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div><img src="./img/logo2.png" alt=""></div>
+                        <ul>
+                            <li>FEEL BEAT COMPANY</li>
+                            <li>IT'S LONELY TO RUN ALONG, RIGHT?</li>
+                            <li>LET'S TRY RACING WITH GLOBAL FRIENDS!</li>
+                            <li>ANYWHERE! ANYTIME</li>
+                            <li>YOU CAN RUN WITH GLOBAL FRIENDS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+            });
+        </script>
+
+        <div class="intro_bot">
+            <button type="button" onclick="location.href='./sub/login.html'">로그인</button>
+            <button type="button" onclick="location.href='./sub/join.html'">가입하기</button>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>필비트</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script type="text/javascript">
+        $(function() {
+            $('.dim_modal>div>a').click(function() {
+                $('.dim_modal').hide()
+            });
+            var fileTarget = $('.filebox .upload-hidden');
+
+            fileTarget.on('change', function() {
+                if (window.FileReader) {
+                    var filename = $(this)[0].files[0].name;
+                } else {
+                    var filename = $(this).val().split('/').pop().split('\\').pop();
+                }
+
+                $(this).siblings('.upload-name').val(filename);
+            });
+        })
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1><img src="../img/logo.png" alt=""></h1>
+        <input type="checkbox" id="top_music">
+        <label for="top_music"></label>
+    </header>
+    <div class="contant comm">
+        <ul class="com_rap">
+            <li>
+                <p>제목</p>
+                <input type="text" placeholder="글 제목을 입력하세요">
+            </li>
+            <li>
+                <p>내용</p>
+                <textarea name="" id="" cols="30" rows="10" placeholder="내용을 입력하세요"></textarea>
+            </li>
+            <li>
+                <p>사진첨부 <span>(1장만 가능)</span></p>
+                <div>
+                    <div class="filebox bs3-primary preview-image">
+                        <label for="input_file">사진첨부</label>
+                        <input type="file" id="input_file" class="upload-hidden">
+                        
+                        <input class="upload-name" value="파일선택" disabled="disabled" style="width: 200px;">
+                    </div>
+                </div>
+            </li>
+            <li><button type="button" class="com_bt">작성완료</button></li>
+        </ul>
+    </div>
+</body>
+
+</html>
